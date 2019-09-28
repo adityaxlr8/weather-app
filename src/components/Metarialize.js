@@ -31,7 +31,7 @@ class SuperCoolComponent extends Component {
       const city = event.target.elements.city.value
       const country = event.target.elements.country.value
 
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
+      const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
       
       const response = await api_call.json();
       
@@ -112,13 +112,8 @@ class SuperCoolComponent extends Component {
           </body>
          
           <span>
-          <div style={{alignItems:'center',display:'flex'}} class="row">
+          <div style={{display:'list'}} class="row">
           <div>
-          <img 
-          src={weather360}
-          width="800"
-          height="500"
-          />
           </div>
           <div class="col s12 m6">
             <div class="card lime accent-1">
